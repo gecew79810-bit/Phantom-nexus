@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Orbital Ring 1 -->
+    <path
+        android:pathData="M 54,26 A 28,14 15 1 1 53.9,26"
+        android:strokeWidth="1.8"
+        android:strokeColor="#00E5FF"
+        android:fillColor="#00000000" />
+
+    <!-- Outer Orbital Ring 2 (Tilted Opposite) -->
+    <path
+        android:pathData="M 54,28 A 28,12 -25 1 1 53.9,28"
+        android:strokeWidth="1.2"
+        android:strokeColor="#7C4DFF"
+        android:fillColor="#00000000" />
+
+    <!-- Central Core Planet Sphere (radius 19 around 54,54) -->
+    <path
+        android:pathData="M54,35 A19,19 0 1,0 54,73 A19,19 0 1,0 54,35 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="40"
+                android:startY="38"
+                android:endX="68"
+                android:endY="70"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="0.45" android:color="#3D5AFE" />
+                <item android:offset="1.0" android:color="#7C4DFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Inner Core Cyber Lines & Circuit Patterns -->
+    <path
+        android:pathData="M 42,54 L 66,54 M 54,42 L 54,66 M 46,46 L 62,62 M 46,62 L 62,46"
+        android:strokeWidth="1.2"
+        android:strokeColor="#E0F7FA"
+        android:fillColor="#00000000" />
+
+    <!-- Inner Core Diamond/Hexagon -->
+    <path
+        android:pathData="M 54,47 L 61,54 L 54,61 L 47,54 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Orbital Energy Nodes -->
+    <path
+        android:pathData="M 31,44 A 2,2 0 1,0 31,48 A 2,2 0 1,0 31,44 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M 77,64 A 2,2 0 1,0 77,68 A 2,2 0 1,0 77,64 Z"
+        android:fillColor="#00E5FF" />
+    <path
+        android:pathData="M 68,36 A 2,2 0 1,0 68,40 A 2,2 0 1,0 68,36 Z"
+        android:fillColor="#E040FB" />
+    <path
+        android:pathData="M 40,72 A 2,2 0 1,0 40,76 A 2,2 0 1,0 40,72 Z"
+        android:fillColor="#E040FB" />
+
+    <!-- Satellite Pulse Dots -->
+    <path
+        android:pathData="M 54,23 A 1.5,1.5 0 1,0 54,26 A 1.5,1.5 0 1,0 54,23 Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M 54,82 A 1.5,1.5 0 1,0 54,85 A 1.5,1.5 0 1,0 54,82 Z"
+        android:fillColor="#FFFFFF" />
+</vector>

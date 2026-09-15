@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessibility_service_desc">Allows MAX AI to assist you by reading screen content and performing navigation actions on your command.</string>
+    <string name="permission_rationale_audio">Microphone permission is required for MAX voice commands in Hindi and English.</string>
+    <string name="permission_rationale_phone">Phone permission allows MAX to dial and make calls for you upon confirmation.</string>
+    <string name="permission_rationale_sms">SMS permission enables MAX to send messages for you upon your confirmation.</string>
+</resources>

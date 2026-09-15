@@ -1,0 +1,6 @@
+{
+  "name": "Phantom Nexus",
+  "description": "Android-native personal AI Operating System & Companion (MAX) with voice, vision, accessibility, Hindi language support, and device control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
