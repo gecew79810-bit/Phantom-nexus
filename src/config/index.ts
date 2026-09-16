@@ -18,6 +18,11 @@ export interface AppConfig {
   tokenraModel: string;
   tokenraFallbackModels: string[];
 
+  grokApiKey: string;
+  grokBaseUrl: string;
+  grokModel: string;
+  grokEnabled: boolean;
+
   primaryProvider: ProviderId;
   autoFailover: boolean;
   maxRetriesPerProvider: number;
@@ -65,6 +70,11 @@ export function loadConfig(): AppConfig {
     tokenraBaseUrl: process.env['TOKENRA_BASE_URL'] || 'https://tokenra.io/v1',
     tokenraModel: process.env['TOKENRA_MODEL'] || 'deepseek-chat',
     tokenraFallbackModels: fallbackModels.length > 0 ? fallbackModels : ['deepseek-reasoner', 'kimi-k1.5', 'glm-4-plus'],
+
+    grokApiKey: process.env['GROK_API_KEY'] || '',
+    grokBaseUrl: process.env['GROK_BASE_URL'] || 'https://api.grok.ai',
+    grokModel: process.env['GROK_MODEL'] || 'grok-1',
+    grokEnabled: (process.env['GROK_ENABLED'] || 'false').toLowerCase() === 'true',
 
     primaryProvider: (process.env['PRIMARY_PROVIDER'] as ProviderId) || 'gemini',
     autoFailover: parseBool(process.env['AUTO_FAILOVER'], true),
