@@ -11,6 +11,7 @@ import { TaskClassifier } from './TaskClassifier.js';
 import { AIProvider, ProviderCallOptions, ProviderResponse } from '../providers/AIProvider.js';
 import { GeminiProvider } from '../providers/GeminiProvider.js';
 import { TokenRaProvider } from '../providers/TokenRaProvider.js';
+import { GrokProvider } from '../providers/GrokProvider.js';
 import { ContextManager } from '../context/ContextManager.js';
 import { config } from '../config/index.js';
 
@@ -30,11 +31,17 @@ export class ModelRouter {
   constructor(
     private registry: ModelRegistry,
     geminiProvider?: AIProvider,
-    tokenRaProvider?: AIProvider
+    tokenRaProvider?: AIProvider,
+    grokProvider?: AIProvider
   ) {
     this.scoringEngine = new ModelScoringEngine(registry);
     this.providers.set('gemini', geminiProvider ?? new GeminiProvider());
     this.providers.set('tokenra', tokenRaProvider ?? new TokenRaProvider());
+
+    // Conditionally register Grok provider when enabled
+    if (config.grokEnabled) {
+      this.providers.set('grok', grokProvider ?? new GrokProvider(config.grokApiKey, config.grokBaseUrl));
+    }
   }
 
   public registerProvider(provider: AIProvider): void {
